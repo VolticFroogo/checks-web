@@ -1,0 +1,10 @@
+<div>
+  <h1>Operator</h1>
+  <div *ngIf="!loaded">Loading operators...</div>
+  <ul *ngIf="loaded">
+    <li *ngFor="let operator of operators" (click)="onClick(operator)">
+      {{ operator.name }}
+    </li>
+  </ul>
+  <div *ngIf="loaded">Add a new operator</div>
+</div>
