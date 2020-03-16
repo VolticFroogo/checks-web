@@ -4,7 +4,7 @@ import { CacheService } from './services/cache.service';
 import { HttpService } from './services/http.service';
 import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Operator } from './models/operator';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-root',

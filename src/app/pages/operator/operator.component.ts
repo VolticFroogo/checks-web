@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Operator } from '../../models/operator';
 import { HttpService } from '../../services/http.service';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { CacheService } from '../../services/cache.service';
