@@ -27,7 +27,16 @@ export class AppComponent implements OnInit {
       this.http.getOperator(operatorID).subscribe((response: HttpResponse<Operator>) => {
         CacheService.operator = response.body;
       }, (response: HttpErrorResponse) => {
-        this.snackBar.open(`Error loading operator: ${ response.error.error }`);
+        localStorage.removeItem('operator');
+
+        if (response.status === 404) {
+          this.snackBar.open('Previous operator was deleted');
+        } else {
+          this.snackBar.open(`Error loading operator: ${ response.error.error }`);
+        }
+
+        CacheService.redirect = window.location.pathname + window.location.search;
+        this.router.navigateByUrl('/operator');
       });
     }
   }
