@@ -6,5 +6,5 @@
       {{ operator.name }}
     </li>
   </ul>
-  <div *ngIf="loaded">Add a new operator</div>
+  <div *ngIf="loaded" (click)="onCreate()">Add a new operator</div>
 </div>

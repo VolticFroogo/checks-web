@@ -10,12 +10,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBarModule } from '@angular/material/snack-bar';
 import { NgProgressModule } from 'ngx-progressbar';
 import { NgProgressHttpModule } from 'ngx-progressbar/http';
+import { NewOperatorDialogComponent } from './dialogs/new-operator-dialog/new-operator-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
     OperatorComponent,
-    RootComponent
+    RootComponent,
+    NewOperatorDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +31,12 @@ import { NgProgressHttpModule } from 'ngx-progressbar/http';
     HttpClientModule,
     MatSnackBarModule,
     NgProgressModule,
-    NgProgressHttpModule
+    NgProgressHttpModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule
   ],
   providers: [
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 5000 } }

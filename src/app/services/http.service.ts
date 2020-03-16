@@ -18,4 +18,8 @@ export class HttpService {
   getOperator(id: string): Observable<HttpResponse<Operator>> {
     return this.http.get<Operator>(`${ this.endpoint }/operator/${ id }`, { observe: 'response' });
   }
+
+  insertOperator(name: string): Observable<HttpResponse<Operator>> {
+    return this.http.post<Operator>(`${ this.endpoint }/operator/`, { name }, { observe: 'response' });
+  }
 }
